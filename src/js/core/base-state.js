@@ -25,8 +25,8 @@ class Base_state_class {
 		this.Base_layers = new Base_layers_class();
 		this.Base_gui = new Base_gui_class();
 		this.layers_archive = [];
-		this.levels = 3;
-		this.levels_optimal = 3;
+		this.levels = 30;
+		this.levels_optimal = 30;
 		this.enabled = true;
 
 		this.set_events();
@@ -174,16 +174,16 @@ class Base_state_class {
 
 			if (total_megapx > 50) {
 				//1 undo level
-				if (this.levels > 1)
+				if (this.levels > 10)
 					alertify.warning('Undo levels changed to 1.');
-				this.levels = 1;
+				this.levels = 10;
 				this.layers_archive = [
 					this.layers_archive[0],
 				];
 			}
 			else {
 				//OK
-				if (this.levels == 1)
+				if (this.levels == 10)
 					alertify.success('Undo levels restored to ' + this.levels);
 				this.levels = this.levels_optimal;
 			}
