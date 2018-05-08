@@ -170,7 +170,6 @@ class Base_layers_class {
 			this.after_render();
 			this.last_zoom = config.ZOOM;
 
-			this.Base_gui.GUI_details.render_details();
 		}
 
 		requestAnimationFrame(function () {
