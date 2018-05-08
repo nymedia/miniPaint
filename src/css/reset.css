@@ -15,7 +15,6 @@
 body{
 	margin: 0px;
 	padding: 0px;
-	padding-top: 30px;
 	background-color: #424F5A;
 	background-color: var(--background-color);
 	font-size: 13px;
