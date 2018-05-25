@@ -42,6 +42,7 @@ var instance = null;
 class Base_layers_class {
 
 	constructor() {
+		this.tick = 0;
 		//singleton
 		if (instance) {
 			return instance;
@@ -110,6 +111,11 @@ class Base_layers_class {
 	 * @param {bool} force
 	 */
 	render(force) {
+		this.tick++;
+		if (this.tick > 30) {
+			this.tick = 0;
+			config.need_render = true;
+		}
 		var _this = this;
 		if (force !== true) {
 			//request render and exit
