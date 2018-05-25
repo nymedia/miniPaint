@@ -164,7 +164,7 @@
 }
 .attributes{
 	float: left;
-	width: calc(100% - 115px);
+	width: calc(100%);
 	height: 30px;
 	margin-top: 5px;
 	padding: 3px 10px 0 10px;
